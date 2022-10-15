@@ -21,10 +21,10 @@ By Dan
 
 1. Constructors.
 1. Pointers & Iterators.
-1. `std::vector`.
+1. Vectors
 1. STL Algorithms.
-1. `std::set`.
-1. `std::map`.
+1. Sets
+1. Maps
 
 Some theory and some questions.
 
@@ -35,10 +35,10 @@ Some theory and some questions.
 Constructors are functions which instantiate an object.
 
 ```cpp
-class Graph;
+class Vector;
 
 int main() {
-    Graph g; // Instantiate an object called g of type Graph.
+    Vector v; // Instantiate an object called v of type Vector.
 }
 ```
 
@@ -46,36 +46,30 @@ int main() {
 
 The job of the constructor is to initialise an object with the values you want it to have initially.
 
+Constructors are always called when an object gets instantiated.
+    It has the same name as the class.
+    It does not return anything.
+
  -->
 
 ---
 
-### How to initialise variables?
-
-There are two ways...
+### Different Types of Constructors
 
 ```cpp
-class Graph {
-public:
-    Graph(Nodes n, Edges e) {  // Assignment - not true initialisation.
-        n_ = n;
-        e_ = e;
-    }
-
-    Graph(Nodes n, Edges e) : n_(n), e_(e) {}  // Using a member initialiser list.
-
-private:
-    Nodes n_;
-    Edges e_;
+class Vector {
+    Vector();                          // Default constructor.
+    Vector(int);                       // User-defined constructor.
+    Vector(Vector const&);             // Copy constructor.
+    Vector(Vector&&);                  // Move constructor.
+    Vector& operator=(Vector const&);  // Copy assignment.
+    Vector& operator=(Vector&&);       // Copy assignment.
 };
 ```
 
 <!-- 
 
-Constructors are always called when an object gets instantiated.
-    It has the same name as the class.
-    It does not return anything.
-
+Default constructor don't have any arguments.
 
 There are two main ways of giving objects their initial value.
     Assignment.
@@ -84,27 +78,7 @@ There are two main ways of giving objects their initial value.
         Values get initialised before the body of the constructor.
         This is very important when you have const and reference attributes.
 
-Show cpp5-02.
-Show cpp5-03.
-
- -->
-
----
-
-### Different Types of Constructors
-
-- Default constructor.
-- User-defined constructor.
-- Copy constructor.
-- Move constructor.
-
-Relevant but not constructors:
-- Copy assignment.
-- Move assignment.
-
-<!-- 
-
-
+Do example-class.cpp.
 
  -->
 
