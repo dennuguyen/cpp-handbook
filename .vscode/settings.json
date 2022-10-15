@@ -1,0 +1,5 @@
+{
+    "markdown.marp.themes": [
+        "https://gitlab.com/dennuguyen/css-themes/-/raw/master/marp/black.css",
+    ]
+}

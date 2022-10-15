@@ -1,6 +1,6 @@
 -------------------
 marp: true
-theme: owr-theme
+theme: black
 class: invert
 paginate: true
 -------------------
