@@ -92,7 +92,7 @@ Move assignments are like move constructors but only if *this already exists.
 Constructors are really boilerplate.
     When we first start learning C++ - just refer to examples. Over time, you rote learn what you need to do.
 
-Do example-class.cpp.
+Do class.example.cpp.
 
  -->
 
@@ -127,7 +127,9 @@ When we create a vector, we can specify its size upon initialisation.
 
 A common mistake students make is not checking the size of the vector before using it.
 
-Do example-vector.cpp.
+Do vector.example.cpp.
+
+Students do class.exercise.cpp.
 
  -->
 
@@ -146,7 +148,7 @@ std::vector<int> v7{1, 2, 3};  // [1, 2, 3].
 When we create a vector, we can specify the initial values of the elements of the vector.
     Very handy.
 
-Do example-vector.cpp.
+Do vector.example.cpp.
 
  -->
 
@@ -181,7 +183,7 @@ If we print ptr directly, then we just print the value which is an address.
 If we print the dereference of ptr, then we print the value at the address.
     When we dereference ptr. We go to the address then we get the value.
 
-Do example-pointer.cpp.
+Do pointer.example.cpp.
 
  -->
 
@@ -217,7 +219,7 @@ We can use pointer arithmetic to access the other elements of the array.
 
 C/C++ also provides a syntactic sugar for accessing an array using [] instead of pointer arithmetic.
 
-Do example-pointer-arithmetic.cpp.
+Do pointer-arithmetic.example.cpp.
 
  -->
 
@@ -250,7 +252,31 @@ We can simply treat iterators exactly as if they are just pointers.
     We use iterators for STL containers.
     We can do pointer arithmetic on iterators as well.
 
-Do example-iterators.cpp.
+Do iterators.example.cpp.
+
+ -->
+
+---
+
+## Sets
+
+A useful STL container if we only want unique values.
+
+<!-- 
+
+Do set.example.cpp.
+
+ -->
+
+---
+
+## Maps
+
+A useful STL container if we want a relationship between two types of values.
+
+<!-- 
+
+Do map.example.cpp.
 
  -->
 
@@ -258,13 +284,37 @@ Do example-iterators.cpp.
 
 ## STL Algorithms
 
+Very convenient functions for common procedures on STL containers.
+
+```cpp
+std::vector<int> vec(100);
+for (auto& i : vec) {
+    i = 42;
+}
+```
+
+Can be condensed into...
+```cpp
+std::fill(vec.begin(), vec.end(), 42);
+```
+
+https://en.cppreference.com/w/cpp/algorithm/fill
+
+<!-- 
+
+Now that we know iterators, we will need iterators to use STL algorithms.
+
+STL algorithms always take two iterators: the start and end of a range we want to operate on.
+
+Some very common STL algorithms:
+    copy
+    fill
+    transform
+    for_each
+    equal
+
+Do equal.example.cpp.
+
+ -->
+
 ---
-
-## Sets
-
----
-
-## Maps
-
----
-
