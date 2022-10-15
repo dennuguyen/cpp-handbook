@@ -262,9 +262,25 @@ Do iterators.example.cpp.
 
 A useful STL container if we only want unique values.
 
+```cpp
+std::set<std::string> s;
+s.insert("abc");
+s.insert("abc");
+s.erase("abc");
+```
+
 <!-- 
 
+Sets are useful if you only care about unique values i.e. no duplicates.
+
+We can insert values into a set.
+    If you tried to insert the same value again then nothing happens.
+
+We can erase values from a set.
+
 Do set.example.cpp.
+
+Students do compress.exercise.cpp.
 
  -->
 
@@ -274,9 +290,37 @@ Do set.example.cpp.
 
 A useful STL container if we want a relationship between two types of values.
 
+```cpp
+std::string str("abbccc");
+std::map<char, int> count;
+count['a'] = 1;  // Access via 'a' to assign 1.
+count['b'];      // Inserts a key 'b'.
+```
+
+We can iterate through maps.
+```cpp
+for (auto const& entry : count) {
+    std::cout << entry.first << std::endl;   // Key.
+    std::cout << entry.second << std::endl;  // Value.
+}
+```
+
 <!-- 
 
+Maps are used to represent a relationship between two types/categories of values.
+
+In this example, we have a close relationship between the char and how many times we have seen the char.
+    Maps consist of keys and values.
+        If we wanted the number of char we have seen, then the lookup/key would be char and value is the count.
+    We access maps via a key which returns a value.
+    We can insert keys into a map without a specified value.
+
+We can also iterate through maps.
+    Entry is a pair of the entry and value.
+
 Do map.example.cpp.
+
+Students do char_count.exercise.cpp.
 
  -->
 
@@ -287,15 +331,15 @@ Do map.example.cpp.
 Very convenient functions for common procedures on STL containers.
 
 ```cpp
-std::vector<int> vec(100);
-for (auto& i : vec) {
+std::vector<int> v(100);
+for (auto& i : v) {
     i = 42;
 }
 ```
 
 Can be condensed into...
 ```cpp
-std::fill(vec.begin(), vec.end(), 42);
+std::fill(v.begin(), v.end(), 42);
 ```
 
 https://en.cppreference.com/w/cpp/algorithm/fill
@@ -313,8 +357,14 @@ Some very common STL algorithms:
     for_each
     equal
 
-Do equal.example.cpp.
+Do stl_algo.example.cpp.
+
+Students do char_count_stl_only.exercise.cpp.
 
  -->
 
 ---
+
+## Problem Solving Session
+
+Have a go at `inverted_map.exercise.cpp` and `discard_smallest.exercise.cpp`.

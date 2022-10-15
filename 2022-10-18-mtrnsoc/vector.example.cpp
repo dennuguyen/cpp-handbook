@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 
-int main() {
-    // Helper function to print vector.
-    auto print = [](std::vector<int> v) {
-        for (auto const& i : v) std::cout << i << " ";
-        std::cout << std::endl;
-    };
+// Helper function to print vector.
+auto print = [](std::vector<int> v) {
+    for (auto const& i : v) std::cout << i << " ";
+    std::cout << std::endl;
+};
 
+int main() {
     // Creating a vector with size.
     {
         std::vector<int> v1;  // Default constructor -> size of 0.
