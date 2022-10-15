@@ -9,11 +9,15 @@ paginate: true
 
 By Dan
 
+2022/10/18
+
 ---
 
 ## Attendance
 
 <centre><img src="attendance.png" alt="attendance" width="30%"></centre>
+
+https://forms.office.com/r/juxYn10TbY
 
 ---
 
