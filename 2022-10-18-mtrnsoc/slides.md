@@ -71,12 +71,26 @@ class Vector {
 
 Default constructor don't have any arguments.
 
+User-defined constructors are constructors we write ourselves.
+    It can have whatever arguments we pass to the constructor.
+
 There are two main ways of giving objects their initial value.
     Assignment.
         Values get initialised in the body of the constructor.
     Initialising.
         Values get initialised before the body of the constructor.
         This is very important when you have const and reference attributes.
+
+Copy constructors should copy the internal data of a class to *this.
+
+Move constructors should move the internal data of a class to *this.
+
+Copy assignments are like copy constructors but only if *this already exists.
+
+Move assignments are like move constructors but only if *this already exists.
+
+Constructors are really boilerplate.
+    When we first start learning C++ - just refer to examples. Over time, you rote learn what you need to do.
 
 Do example-class.cpp.
 
